@@ -1,5 +1,5 @@
 // TODO 1: Import and Create express app instance
-importn express from "express";
+import express from "express";
 
 // TODO 1: Define server port
 const PORT = process.env.PORT || 3000;
