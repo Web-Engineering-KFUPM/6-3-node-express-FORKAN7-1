@@ -1,6 +1,6 @@
 // TODO 1: Import and Create express app instance
 import express from "express";
-
+import { getRandomQuote } from "./quotes.js";
 // TODO 1: Define server port
 const PORT = process.env.PORT || 3000;
 
@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 // TODO 4: Import and Apply CORS middleware
 import cors from "cors";
+const app = express();
 app.use(cors());
 
 
@@ -24,12 +25,9 @@ app.get("/", (req, res) => {
 
 
 // TODO 6.2: Create "/api/quote" route
-app.get("/api/quote", (req, res) => {
-  const quote = {
-    text: "The only way to do great work is to love what you do.",
-    author: "Steve Jobs"
-  };
-  res.json(quote);
+aapp.get("/api/quote", (req, res) => {
+  const quote = getRandomQuote();
+  res.json({ quote });
 });
 
 
