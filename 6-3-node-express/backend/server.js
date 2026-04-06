@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
 
 
 // TODO 6.2: Create "/api/quote" route
-aapp.get("/api/quote", (req, res) => {
+app.get("/api/quote", (req, res) => {
   const quote = getRandomQuote();
   res.json({ quote });
 });
